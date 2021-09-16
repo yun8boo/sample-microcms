@@ -13,7 +13,7 @@ jobs:
       - name: npm install, build
         run: |
           npm install
-          npm run build
+          npm run build -token=${{ secrets.MICRO_CMS_API_KEY }}
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.4.x
