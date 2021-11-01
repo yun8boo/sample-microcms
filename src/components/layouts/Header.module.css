@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.list > li {
+  padding: 0 8px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}

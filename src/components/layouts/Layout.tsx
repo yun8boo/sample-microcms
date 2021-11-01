@@ -1,12 +1,13 @@
 import { FC } from "react"
-import { Header, HeaderProps } from "./Header"
+import { Header } from "./Header"
+import styles from "./Layout.module.css"
 
-type Props = & HeaderProps
+type Props = {}
 
-export const Layout: FC<Props> = ({ children, documentDownloadButtonText, inquiryDownloadButtonText }) => {
+export const Layout: FC<Props> = ({ children }) => {
   return (
-    <div>
-      <Header documentDownloadButtonText={documentDownloadButtonText} inquiryDownloadButtonText={inquiryDownloadButtonText} />
+    <div className={styles.container}>
+      <Header　/>
       {children}
     </div>
   )

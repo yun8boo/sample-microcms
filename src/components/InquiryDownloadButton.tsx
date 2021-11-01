@@ -1,11 +1,7 @@
-interface Props {
-  value: string
-}
-
-export const InquiryDownloadButton = ({value}: Props) => {
+export const InquiryDownloadButton = () => {
   return (
     <button>
-      { value }
+      お問い合わせ
     </button>
   )
 }

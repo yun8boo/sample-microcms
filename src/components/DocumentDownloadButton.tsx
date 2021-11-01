@@ -1,11 +1,7 @@
-interface Props {
-  value: string
-}
-
-export const DocumentDownloadButton = ({value}: Props) => {
+export const DocumentDownloadButton = () => {
   return (
     <button>
-      { value }
+      資料ダウンロード
     </button>
   )
 }
