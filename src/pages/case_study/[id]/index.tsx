@@ -32,8 +32,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const result = hljs.highlightAuto($(elm).text());
     $(elm).html(result.value);
     $(elm).addClass('hljs');
-  });
-  
+  });  
 
   return {
     props: {
