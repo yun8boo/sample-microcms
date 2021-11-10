@@ -2,12 +2,12 @@ import type { GetStaticProps, GetStaticPaths } from 'next'
 import { client } from '@/lib/microcms/client'
 import { LpParts } from '@/components/domain/lp/LpParts';
 
-const Lp = ({content}: any) => {
-  console.log(content);
+const Lp = ({content, globalValue}: any) => {
+  console.log(content, globalValue);
   return (
     <div>
       <h1>LP</h1>
-      <LpParts displays={content.displays} />
+      <LpParts displays={content.displays} globalValue={globalValue} />
     </div>
   )
 }
@@ -23,9 +23,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context?.params?.slug;
   const data: any = await client.get({ endpoint: "landing-page", contentId: id as string });
+  const textManagement = await client.get<any>({endpoint: 'text-management'})
   return {
     props: {
       content: data,
+      globalValue: textManagement
     },
   };
 };
