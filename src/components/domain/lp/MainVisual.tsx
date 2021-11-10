@@ -1,5 +1,7 @@
 export const MainVisual = () => {
   return (
-    <p>MainVisual</p>
+    <div className='container'>
+      <p>MainVisual</p>
+    </div>
   )
 }

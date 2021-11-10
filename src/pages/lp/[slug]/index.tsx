@@ -1,12 +1,13 @@
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import { client } from '@/lib/microcms/client'
+import { LpParts } from '@/components/domain/lp/LpParts';
 
 const Lp = ({content}: any) => {
   console.log(content);
   return (
     <div>
       <h1>LP</h1>
-      <p>{JSON.stringify(content)}</p>
+      <LpParts displays={content.displays} />
     </div>
   )
 }
