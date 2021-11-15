@@ -16,6 +16,7 @@ interface Props {
 }
 
 export const LpParts = ({ displays, globalValue }: Props) => {
+  console.log(displays);
   const parts = displays.map((display, i) => {
     switch(display.fieldId) {
       case 'firstView':
