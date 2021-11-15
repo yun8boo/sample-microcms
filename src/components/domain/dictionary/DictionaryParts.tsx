@@ -12,7 +12,7 @@ export const DictionaryParts = ({ contents }: Props) => {
       case 'body':
         return <Body html={content.body} />
       case 'image':
-        return <Image key={i} src={content.image.url} width={content.image.width}  height={content.image.height}/>
+        return <Image key={i} src={content.image.url} width={content.image.width} height={content.image.height} />
       default:
         return null
     }
