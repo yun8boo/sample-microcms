@@ -3,5 +3,5 @@ export const MainVisual = () => {
     <div className='container'>
       <p>MainVisual</p>
     </div>
-  )
-}
+  );
+};
