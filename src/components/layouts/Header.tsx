@@ -1,7 +1,5 @@
-import Link from "next/link"
-import { DocumentDownloadButton } from "../DocumentDownloadButton"
-import { InquiryDownloadButton } from "../InquiryDownloadButton"
-import styles from "./Header.module.css"
+import Link from 'next/link';
+import styles from './Header.module.css';
 
 export const Header = () => {
   return (
@@ -24,10 +22,18 @@ export const Header = () => {
               <a>お知らせ</a>
             </Link>
           </li>
+          <li>
+            <Link href={`/lp`}>
+              <a>lp</a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/dictionary`}>
+              <a>社内制度辞典</a>
+            </Link>
+          </li>
         </ul>
-        <DocumentDownloadButton />
-        <InquiryDownloadButton />
       </div>
     </header>
-  )
-}
+  );
+};
